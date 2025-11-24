@@ -17,6 +17,8 @@ $balance = $_SESSION['balance'];
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
+
     <title>Bank (Double-Submit Cookie)</title></head>
 <body>
   <h1>Bank (Double-Submit Cookie)</h1>

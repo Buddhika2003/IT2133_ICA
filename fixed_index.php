@@ -15,6 +15,8 @@ $balance = $_SESSION['balance'];
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
+
     <title>Bank (Fixed - Synchronizer Token)</title>
 </head>
 <body>

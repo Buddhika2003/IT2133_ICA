@@ -9,6 +9,7 @@ $balance = $_SESSION['balance'];
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
     <title>Vulnerable Bank</title>
 </head>
 <body>

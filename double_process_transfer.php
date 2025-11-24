@@ -34,6 +34,8 @@ $_SESSION['balance'] -= $amount;
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
+
     <title>Transfer Done (Double-Submit)</title>
 </head>
 <body>

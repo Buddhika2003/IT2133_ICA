@@ -28,7 +28,10 @@ $_SESSION['balance'] -= $amount;
 ?>
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Transfer Done</title></head>
+    <link rel="stylesheet" href="style.css">
+
+<head><title>Transfer Done</title></head>
+
 <body>
   <h1>Transfer Complete</h1>
   <p>Sent $<?php echo htmlentities($amount); ?> to <?php echo htmlentities($account); ?>.</p>

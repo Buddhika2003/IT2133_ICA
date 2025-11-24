@@ -1,5 +1,7 @@
 <!doctype html>
 <html>
+    <link rel="stylesheet" href="style.css">
+
 <head><title>Attack Page</title>
 </head>
 <body>
