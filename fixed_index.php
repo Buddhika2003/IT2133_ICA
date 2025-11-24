@@ -2,7 +2,7 @@
 
 session_start();
 if (!isset($_SESSION['balance'])) {
-    $_SESSION['balance'] = 1000;
+    $_SESSION['balance'] = 10000;
 }
 
 

@@ -7,6 +7,20 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit('Method not allowed');
 }
 
+
+$posted_token = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
+if (empty($posted_token) || !isset($_SESSION['csrf_token'])) {
+    http_response_code(403);
+    exit('CSRF token missing');
+}
+
+if (!hash_equals($_SESSION['csrf_token'], $posted_token)) {
+    http_response_code(403);
+    exit('Invalid CSRF token');
+}
+
+
+
 $account = isset($_POST['account']) ? trim($_POST['account']) : '';
 $amount = isset($_POST['amount']) ? floatval($_POST['amount']) : 0;
 
@@ -22,16 +36,17 @@ if ($amount > $_SESSION['balance']) {
     exit('Insufficient funds');
 }
 
-
 $_SESSION['balance'] -= $amount;
-
 ?>
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Transfer Done</title></head>
+<head>
+    
+<title>Transfer Done (Fixed)</title>
+</head>
 <body>
-  <h1>Transfer Complete</h1>
+  <h1>Transfer Complete (Fixed)</h1>
   <p>Sent $<?php echo htmlentities($amount); ?> to <?php echo htmlentities($account); ?>.</p>
-  <p><a href="index.php">Back to account</a></p>
+  <p><a href="fixed_index.php">Back to account</a></p>
 </body>
 </html>
